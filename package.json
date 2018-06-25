@@ -1,0 +1,11 @@
+{
+  "name": "node-yeelight",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://cpave3@github.com/cpave3/node-yeelight",
+  "author": "Cameron Pavey <cpave3@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
