@@ -3,7 +3,11 @@
 node-yeelight is a 0 dependency solution for controlling Xiaomi Yeelights. There are already a number of other solutions 
 available, but they were not exactly what I wanted, so I made another one to be better than all the others.
 
-![competing standards](https://imgs.xkcd.com/comics/standards.png)
+<p align="center">
+  <!-- Why isn't there Markdown for centered images? -->
+  <img src="https://imgs.xkcd.com/comics/standards.png" alt="Competing standards">
+</p>
+
 
 ## How is this any different?
 
