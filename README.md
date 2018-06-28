@@ -1,4 +1,5 @@
 # node-yeelight
+[![Build Status](https://travis-ci.org/cpave3/node-yeelight.svg?branch=master)](https://travis-ci.org/cpave3/node-yeelight)
 
 node-yeelight is a 0 dependency solution for controlling Xiaomi Yeelights. There are already a number of other solutions 
 available, but they were not exactly what I wanted, so I made another one to be better than all the others.
