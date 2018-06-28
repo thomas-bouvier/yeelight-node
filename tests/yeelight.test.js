@@ -1,7 +1,8 @@
 'use strict';
 
 const chai   = require('chai')
-    , expect = chai.expect;
+    , expect = chai.expect
+    , sinon  = require('sinon');
 
 const Yeelight = require('../');
 
@@ -57,5 +58,32 @@ describe('_ifValid', () => {
         const yee = new Yeelight();
         expect(yee._ifValid('invalidString', ['validString', 2, 3, 4], 'default')).to.equal('default');
         expect(yee._ifValid('invalidString', ['validString', 2, 3, 4])).to.equal(''); 
+    });
+});
+
+describe('Yeelight Class', () => {
+    const yee = new Yeelight({ip: '0.0.0.0', port: 55443});
+    this.write = sinon.stub(yee.client, 'write').returns(true);
+    this.connect = sinon.stub(yee.client, 'connect');
+
+    it('should emit values coming from the data listener', (done) => {
+        yee.on('data', (data) => {
+            expect(data).to.equal(true);
+            done();
+        });
+        yee.emit('data', true);
+    });
+
+    it('should emit values coming from the close listener', (done) => {
+        yee.on('close', (data) => {
+            expect(yee.connected).to.equal(false);
+            expect(data).to.be.an('object');
+            done();
+        });
+        yee.emit('close', {});
+    });
+   
+    it('should touch the command sneder with toggle', () => {
+        yee.toggle();
     });
 });
