@@ -2,8 +2,12 @@
   "name": "node-yeelite",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://cpave3@github.com/cpave3/node-yeelight",
+  "repository": "https://thomas-bouvier@github.com/thomas-bouvier/node-yeelight",
   "author": "Cameron Pavey <cpave3@gmail.com>",
+  "contributors": [{
+    "name": "Thomas Bouvier",
+    "email": "contact@thomas-bouvier.io"
+  }],
   "license": "MIT",
   "dependencies": {
     "npm-check-updates": "^3.0.8"

@@ -6,4 +6,6 @@ client.on('message', data => {
     console.log(data.toString());
 });
 
-client.bind();
+client.bind(yeelight => {
+    yeelight.set_rgb([250, 150, 120])
+});

@@ -1,6 +1,6 @@
 # node-yeelight
 
-*node-yeelight* is a 0 dependency solution for controlling Xiaomi Yeelights. This version also includes an SSDP implementation to retrieve the IP of your light.
+**node-yeelight** is a 0 dependency solution for controlling Xiaomi Yeelights. This version also includes an SSDP implementation to retrieve the IP of your light.
 
 <p align="center">
   <!-- Why isn't there Markdown for centered images? -->
@@ -13,12 +13,24 @@ Simply require and instantiate the package as a class, passing in the ip address
 
 ```
 const Yeelight = require('node-yeelight');
-const yee = new Yeelight({ ip: 0.0.0.0, port: 55443 });
+
+const yeelight = new Yeelight({ ip: '0.0.0.0', port: 55443 });
+yeelight.set_rgb([250, 150, 120])
+```
+
+If you don't know the IP of your light, you can use the SSDP client to scan your network:
+
+```
+const Client = require('node-yeelight');
+
+new Client().bind(yeelight => {
+    yeelight.set_rgb([250, 150, 120])
+});
 ```
 
 You can now call any of the operations from the official docs on this instance.
 
-*⚠️ Make sure you enabled the *LAN Control* option in the Yeelight app.*
+**⚠️ Make sure you enabled the *LAN Control* option in the Yeelight app.**
 
 ## Credits
 
