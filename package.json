@@ -1,8 +1,8 @@
 {
-  "name": "node-yeelite",
+  "name": "yeelight-node-binding",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://thomas-bouvier@github.com/thomas-bouvier/node-yeelight",
+  "repository": "https://thomas-bouvier@github.com/thomas-bouvier/yeelight-node-binding",
   "author": "Cameron Pavey <cpave3@gmail.com>",
   "contributors": [{
     "name": "Thomas Bouvier",

@@ -7,5 +7,6 @@ client.on('message', data => {
 });
 
 client.bind(yeelight => {
+    yeelight.set_power('on')
     yeelight.set_rgb([250, 150, 120])
 });
