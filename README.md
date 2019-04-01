@@ -1,6 +1,6 @@
 # yeelight-node-binding
 
-yeelight-node-binding is a 0 dependency solution for controlling Xiaomi Yeelights.
+A simple solution to discover and control Xiaomi Yeelights.
 
 This solution offers a 1:1 implementation of the [official docs from Xiaomi](http://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf), and also includes an SSDP implementation to retrieve the IP of your light.
 
@@ -25,12 +25,19 @@ If you don't know the IP of your light, you can use the SSDP client to scan your
 ```javascript
 const Client = require('yeelight-node-binding')
 
-new Client().bind(yeelight => {
+const client = new Client()
+
+client.bind(yeelight => {
+    yeelight.set_power('on')
     yeelight.set_rgb([250, 150, 120])
+
+    yeelight.get_prop('bright').then(
+        data => console.log(data)
+    )
 })
 ```
 
-You can now call any of the operations from the official docs on this instance.
+You can now call any of the operations from the [official docs](http://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf) on this instance.
 
 **⚠️ Make sure you enabled the *LAN Control* option in the Yeelight app.**
 
