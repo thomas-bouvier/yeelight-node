@@ -1,6 +1,8 @@
 # yeelight-node-binding
 
-**yeelight-node-binding** is a 0 dependency solution for controlling Xiaomi Yeelights. This solution offers a 1:1 implementation of the [official docs from Xiaomi](http://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf), and also includes an SSDP implementation to retrieve the IP of your light.
+yeelight-node-binding is a 0 dependency solution for controlling Xiaomi Yeelights.
+
+This solution offers a 1:1 implementation of the [official docs from Xiaomi](http://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf), and also includes an SSDP implementation to retrieve the IP of your light.
 
 <p align="center">
   <!-- Why isn't there Markdown for centered images? -->
