@@ -15,16 +15,20 @@ Simply require and instantiate the package as a class, passing in the ip address
 
 ```javascript
 const Yeelight = require('yeelight-node-binding')
-
 const yeelight = new Yeelight({ ip: '0.0.0.0', port: 55443 })
+
+yeelight.set_power('on')
 yeelight.set_rgb([250, 150, 120])
+
+yeelight.get_prop('bright').then(
+    data => console.log(data)
+)
 ```
 
 If you don't know the IP of your light, you can use the SSDP client to scan your network:
 
 ```javascript
 const Client = require('yeelight-node-binding')
-
 const client = new Client()
 
 client.bind(yeelight => {
