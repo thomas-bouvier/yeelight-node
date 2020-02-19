@@ -1,8 +1,8 @@
 {
-  "name": "yeelight-node-binding",
+  "name": "yeelight-node",
   "version": "1.1.1",
   "main": "index.js",
-  "repository": "https://thomas-bouvier@github.com/thomas-bouvier/yeelight-node-binding",
+  "repository": "https://thomas-bouvier@github.com/thomas-bouvier/yeelight-node",
   "keywords": [
     "xiaomi",
     "yeelight",

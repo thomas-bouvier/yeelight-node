@@ -1,4 +1,4 @@
-# yeelight-node-binding
+# yeelight-node
 
 A simple solution to discover and control Xiaomi Yeelights.
 
@@ -14,7 +14,8 @@ This solution offers a 1:1 implementation of the [official docs from Xiaomi](htt
 Simply require and instantiate the package as a class, passing in the ip address and port of the light as an object.
 
 ```javascript
-const Yeelight = require('yeelight-node-binding')
+const Yeelight = require('yeelight-node')
+
 const yeelight = new Yeelight({ ip: '0.0.0.0', port: 55443 })
 
 yeelight.set_power('on')
@@ -28,7 +29,8 @@ yeelight.get_prop('bright').then(
 If you don't know the IP of your light, you can use the SSDP client to scan your network:
 
 ```javascript
-const Client = require('yeelight-node-binding')
+const Client = require('yeelight-node')
+
 const client = new Client()
 
 client.bind(yeelight => {
