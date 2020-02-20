@@ -20,6 +20,14 @@
   ],
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {},
-  "scripts": {}
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "sinon": "^9.0.0"
+  },
+  "scripts": {
+    "test": "npx nyc mocha ./tests/*.test.js",
+    "coverage": "npx nyc -r lcov mocha ./tests/*.test.js"
+  }
 }
