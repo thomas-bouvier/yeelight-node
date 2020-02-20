@@ -1,6 +1,6 @@
 # yeelight-node
 
-A simple solution to discover and control Xiaomi Yeelights.
+A simple Node.js library to discover and control Xiaomi Yeelights over LAN.
 
 This solution offers a 1:1 implementation of the [official docs from Xiaomi](http://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf), and also includes an SSDP implementation to retrieve the IP of your light.
 
@@ -8,6 +8,12 @@ This solution offers a 1:1 implementation of the [official docs from Xiaomi](htt
   <!-- Why isn't there Markdown for centered images? -->
   <img src="https://imgs.xkcd.com/comics/standards.png" alt="Competing standards">
 </p>
+
+## Installation
+
+```bash
+$ npm i yeelight-node
+```
 
 ## Usage
 
