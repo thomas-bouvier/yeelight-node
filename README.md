@@ -21,7 +21,13 @@ npm i yeelight-node
 
 ## Usage
 
-Simply require and instantiate the package as a class, passing in the ip address and port of the light as an object.
+You can get started by running the example, which will discover and ping your lights over LAN:
+
+```bash
+node example/index.js
+```
+
+In your code, simply require and instantiate the package as a class, passing in the IP address and port of the light as an object.
 
 ```javascript
 const Yeelight = require('yeelight-node')
