@@ -1,5 +1,6 @@
 # yeelight-node
 
+[![npm](https://img.shields.io/npm/v/yeelight-node.svg)](https://www.npmjs.com/package/yeelight-node)
 [![Build Status](https://travis-ci.com/thomas-bouvier/yeelight-node.svg?branch=master)](https://travis-ci.com/thomas-bouvier/yeelight-node)
 
 A simple Node.js library to discover and control Xiaomi Yeelights over LAN.
@@ -14,7 +15,8 @@ This solution offers a 1:1 implementation of the [official docs from Xiaomi](htt
 ## Installation
 
 ```bash
-$ npm i yeelight-node
+# Run this in your favourite terminal
+npm i yeelight-node
 ```
 
 ## Usage
