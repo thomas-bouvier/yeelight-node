@@ -86,4 +86,9 @@ describe('Yeelight Class', () => {
     it('should touch the command sneder with toggle', () => {
         yeelight.toggle()
     })
+
+    it('should close the tcp connection', () => {
+        yeelight.closeConnection();
+        expect(yeelight.connected).to.equal(false);
+    })
 })
