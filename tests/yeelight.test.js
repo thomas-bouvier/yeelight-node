@@ -1,8 +1,8 @@
 'use strict'
 
-const chai   = require('chai')
+const chai = require('chai')
     , expect = chai.expect
-    , sinon  = require('sinon')
+    , sinon = require('sinon')
 
 const Yeelight = require('../').Yeelight
 
@@ -82,13 +82,13 @@ describe('Yeelight Class', () => {
         })
         yeelight.emit('close', {})
     })
-   
+
     it('should touch the command sneder with toggle', () => {
         yeelight.toggle()
     })
 
     it('should close the tcp connection', () => {
-        yeelight.closeConnection();
-        expect(yeelight.connected).to.equal(false);
+        yeelight.closeConnection()
+        expect(yeelight.connected).to.equal(false)
     })
 })
