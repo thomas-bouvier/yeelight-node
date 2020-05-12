@@ -75,11 +75,13 @@ describe('Yeelight Class', () => {
     })
 
     it('should emit values coming from the close listener', (done) => {
-        yeelight.on('close', (data) => {
+        function onClose(data) {
             expect(yeelight.connected).to.equal(false)
             expect(data).to.be.an('object')
+            yeelight.removeListener('close', onClose);
             done()
-        })
+        }
+        yeelight.on('close', onClose)
         yeelight.emit('close', {})
     })
 
