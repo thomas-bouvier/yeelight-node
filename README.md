@@ -21,13 +21,15 @@ npm i yeelight-node
 
 ## Usage
 
-You can get started by running the example, which will discover and ping your lights over LAN:
+**⚠️ Make sure you enabled the *LAN Control* option in the Yeelight app.**
+
+You can get started by running the example, which will discover and ping your devices over LAN:
 
 ```bash
 node example/index.js
 ```
 
-In your code, simply require and instantiate the package as a class, passing in the IP address and port of the light as an object.
+In your code, simply require and instantiate the package as a class, passing in the IP address and port of the device as an object.
 
 ```javascript
 const { Yeelight } = require('yeelight-node')
@@ -42,7 +44,7 @@ yeelight.get_prop('bright').then(
 )
 ```
 
-If you don't know the IP of your light, you can use the SSDP client to scan your network:
+If you don't know the IP of your device, you can use the SSDP client to scan your network:
 
 ```javascript
 const { Client } = require('yeelight-node')
@@ -61,7 +63,7 @@ client.bind(yeelight => {
 
 You can now call any of the operations from the [official docs](http://www.yeelight.com/download/Yeelight_Inter-Operation_Spec.pdf) on this instance.
 
-**⚠️ Make sure you enabled the *LAN Control* option in the Yeelight app.**
+As stated in the docs, Xiaomi devices support up to 4 simultaneous TCP connections. Any further connect attempt will be rejected. This library exposes the `yeelight.closeConnection()` to close the TCP connection at will, should your use case require it.
 
 ## Credits
 
