@@ -65,6 +65,14 @@ You can now call any of the operations from the [official docs](http://www.yeeli
 
 As stated in the docs, Xiaomi devices support up to 4 simultaneous TCP connections. Any further connect attempt will be rejected. This library exposes the `yeelight.closeConnection()` to close the TCP connection at will, should your use case require it.
 
+## Tests
+
+To run the tests:
+
+```javascript
+mocha tests/yeelight.test.js
+```
+
 ## Credits
 
 Original work by [@cpav3](https://github.com/cpave3).
